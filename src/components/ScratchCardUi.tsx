@@ -1,10 +1,8 @@
-import React from "react";
 import ScratchCard from "react-scratchcard-v2";
 import IMG from "/scratchUi.jpeg";
 
 const ScratchUi = (data:any) => {
 
-  console.log("===================== ",data)
 
   return (
     <div>

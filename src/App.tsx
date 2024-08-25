@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ShopOwner from './components/ShopOwner'
 import CustomersUi from './components/CustomersUi'
