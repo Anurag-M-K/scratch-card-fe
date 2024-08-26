@@ -8,6 +8,7 @@ function CustomersUi() {
   const location = useLocation()
   const token = location.pathname.split('/').pop();
   const [offer,setOffer] = useState<any>(null);
+  console.log("offer ",offer)
   const mutation = useMutation({
     mutationFn: async () => {
       return await instance({
