@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ScratchUi from './ScratchCardUi';
+// import ScratchUi from './ScratchCardUi';
 import { useLocation } from "react-router-dom";
 import { useMutation } from '@tanstack/react-query';
 import instance from '../config/axiosInstance';
@@ -59,7 +59,7 @@ function CustomersUi() {
       {/* Scratch Card UI */}
       <div className="text-center mb-6">
     {/* <ScratchCard/> */}
-    <ScratchUi data={offer}/>
+    {/* <ScratchUi data={offer}/> */}
     {/* <img src="/successComponent.png" className='w-6 h-6' alt="" /> */}
       </div>
     </div>
