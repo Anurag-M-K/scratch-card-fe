@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useLocation } from "react-router-dom";
 import { useMutation } from '@tanstack/react-query';
 import instance from '../config/axiosInstance';
+import ScratchUi from './ScratchCardUi';
 
 function CustomersUi() {
   const location = useLocation()
@@ -60,7 +61,9 @@ function CustomersUi() {
       {/* Scratch Card UI */}
       <div className="text-center mb-6">
     {/* <ScratchCard/> */}
-    {/* <ScratchUi data={offer}/> */}
+    <ScratchUi 
+    data={offer}
+    />
     {/* <img src="/successComponent.png" className='w-6 h-6' alt="" /> */}
       </div>
     </div>

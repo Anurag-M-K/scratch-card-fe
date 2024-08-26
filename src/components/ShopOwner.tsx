@@ -33,9 +33,9 @@ function ShopOwner() {
     // isLoading(true)
     console.log(data);
     isLoading(true)
-    const message = `Here is your Scratch card link :${
-      import.meta.env.VITE_APP_URL
-    } `;
+    // const message = `Here is your Scratch card link :${
+    //   import.meta.env.VITE_APP_URL
+    // } `;
 
     try {
       // const response = await fetch(
@@ -56,16 +56,16 @@ function ShopOwner() {
         url:`/api/send-scratch-card-link`,
         method:"POST",
         data:{
-          mobileNumber:data.mobileNumber,message
+          mobileNumber:data.mobileNumber
         }
 
       })
-      console.log("response ",result)
+      console.log("response ",result.data)
 
 
       // const result = await response.json();
 
-      if (result.success) {
+      if (result.data?.success) {
         isLoading(false)
         // perform success
       } else {
