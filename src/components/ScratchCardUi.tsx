@@ -1,10 +1,10 @@
-import ScratchCard from "react-scratchcard-v2";
+// import ScratchCard from "react-scratchcard-v2";
 import IMG from "/scratchUi.jpeg";
 
 const ScratchUi = (data: any) => {
   return (
     <div>
-      <ScratchCard
+      {/* <ScratchCard
         width={300}
         height={300}
         image={IMG}
@@ -17,7 +17,7 @@ const ScratchUi = (data: any) => {
         <span className="text-3xl text-yellow-300 font-bold mx-2">
           {data?.data?.offer}
         </span>
-      </ScratchCard>
+      </ScratchCard> */}
     </div>
   );
 };
