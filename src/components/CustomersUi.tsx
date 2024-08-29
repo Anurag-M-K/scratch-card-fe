@@ -9,7 +9,6 @@ function CustomersUi() {
   const location = useLocation()
   const token = location.pathname.split('/').pop();
   const [offer,setOffer] = useState<any>(null);
-  console.log("offer ",offer)
   const mutation = useMutation({
     mutationFn: async () => {
       return await instance({
@@ -22,7 +21,6 @@ function CustomersUi() {
     },
     onSuccess: (data) => {
       // Handle the response on success
-      console.log("Offer Verified", data);
       setOffer(data?.data)
     },
     onError: (error) => {
