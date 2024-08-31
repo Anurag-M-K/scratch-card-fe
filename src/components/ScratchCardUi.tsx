@@ -50,30 +50,36 @@ const ScratchUi = (data: any) => {
   };
 
   const handleEnd = () => setIsScratching(false);
-
+// if(!data?.data?.offer){
+//   return <div className="flex justify-center items-center text-3xl font-bold">Expired</div>
+// }
+console.log("Data",data)
   return (
     <div className="flex flex-col items-center justify-center mt-10">
-      <h2 className="text-2xl mb-4">Scratch to Reveal Your Gift!</h2>
-      <div className="relative">
-        <canvas
-          ref={canvasRef}
-          className="absolute top-0 left-0 z-20 cursor-pointer"
-          onMouseDown={handleStart}
-          onMouseUp={handleEnd}
-          onMouseMove={handleMove}
-          onMouseLeave={handleEnd}
-          onTouchStart={handleStart}
-          onTouchEnd={handleEnd}
-          onTouchMove={handleMove}
-          onMouseEnter={isScratching ? handleMove : undefined} // Start scratching on hover
-        />
-        <div className="w-72 h-48 flex flex-col items-center text-white font-bold justify-center z-10">
-          <h1 className="text-2xl">Congratulations! You've won</h1>
-          <span className="font-bold text-3xl text-yellow-500">
-            🎁{data?.data?.offer}🎁
-          </span>
-        </div>
-      </div>
+      {/* {data?.data?.offer ? ( */}
+      <><h2 className="text-2xl mb-4">Scratch to Reveal Your Gift!</h2><div className="relative">
+          <canvas
+            ref={canvasRef}
+            className="absolute top-0 left-0 z-20 cursor-pointer"
+            onMouseDown={handleStart}
+            onMouseUp={handleEnd}
+            onMouseMove={handleMove}
+            onMouseLeave={handleEnd}
+            onTouchStart={handleStart}
+            onTouchEnd={handleEnd}
+            onTouchMove={handleMove}
+            onMouseEnter={isScratching ? handleMove : undefined} // Start scratching on hover
+          />
+          <div className="w-72 h-48 flex flex-col items-center text-white font-bold justify-center z-10">
+            {/* <h1 className="text-2xl">Congratulations! You've won</h1> */}
+            <span className="font-bold text-3xl text-yellow-500">
+              { data?.data?.offer ?`🎁 ${data?.data?.offer} 🎁` : "Expired"}
+            </span>
+          </div>
+        </div></>
+        {/* ) : (
+                 <h1>Expired</h1>
+                )} */}
     </div>
   );
 };
