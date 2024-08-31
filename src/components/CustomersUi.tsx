@@ -47,17 +47,17 @@ function CustomersUi() {
       }}
     >
       {/* Logo Section */}
-      <div className="text-center mb-2 flex flex-col  justify-center items-center">
+      <div className="text-center flex flex-col  justify-center items-center">
         <img src="./logo-new.png" className="w-44" alt="logo" />
       </div>
 
       {/* Scratch Card Section */}
-      <div className="text-center mb-6">
+      <div className="text-center">
         <img src="./sc.png" className="w-60 rounded-full " alt="" />
       </div>
 
       {/* Scratch Card UI */}
-      <div className="text-center mb-6">
+      <div className="text-center">
     {/* <ScratchCard/> */}
     <ScratchUi 
     data={offer}
