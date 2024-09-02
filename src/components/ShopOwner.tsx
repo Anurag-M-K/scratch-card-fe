@@ -113,13 +113,22 @@ function ShopOwner() {
             >
               <option value="">Select Mobile</option>
               <option value="iPhone 12">iPhone 12</option>
-              <option value="iPhone 12 Pro">iPhone 12 Pro</option>
+              <option value="iPhone 12 Pro">iPhone 12 mini</option>
+              <option value="iPhone 12 Pro">iPhone 12 pro</option>
+              <option value="iPhone 12 Pro">iPhone 12 Pro max</option>
               <option value="iPhone 13">iPhone 13</option>
+              <option value="iPhone 13">iPhone 13 mini</option>
               <option value="iPhone 13 Pro">iPhone 13 Pro</option>
+              <option value="iPhone 13 Pro">iPhone 13 Pro max</option>
               <option value="iPhone 14">iPhone 14</option>
+              <option value="iPhone 14">iPhone 14 plus</option>
               <option value="iPhone 14 Pro">iPhone 14 Pro</option>
+              <option value="iPhone 14 Pro">iPhone 14 Pro max</option>
               <option value="iPhone 15">iPhone 15</option>
+              <option value="iPhone 15">iPhone 15 plus</option>
               <option value="iPhone 15 Pro">iPhone 15 Pro</option>
+              <option value="iPhone 15 Pro">iPhone 15 Pro max</option>
+              <option value="iPhone 15 Pro">Other</option>
             </select>
           </div>
 
