@@ -8,6 +8,7 @@ type TOnsubmitData = {
   fresh?: boolean;
   used?: boolean;
   mobileNumber: string;
+  selectedModel: string;
 };
 
 function ShopOwner() {
@@ -31,8 +32,7 @@ function ShopOwner() {
 
   const onSubmit = async (data: TOnsubmitData) => {
     // isLoading(true)
-    console.log(data);
-    isLoading(true)
+    isLoading(true);
     // const message = `Here is your Scratch card link :${
     //   import.meta.env.VITE_APP_URL
     // } `;
@@ -52,21 +52,18 @@ function ShopOwner() {
       //   }
       // );
 
-      const result:any = await instance({
-        url:`/api/send-scratch-card-link`,
-        method:"POST",
-        data:{
-          mobileNumber:data.mobileNumber
-        }
-
-      })
-      console.log("response ",result.data)
-
+      const result: any = await instance({
+        url: `/api/send-scratch-card-link`,
+        method: "POST",
+        data: {
+          mobileNumber: data.mobileNumber,
+        },
+      });
 
       // const result = await response.json();
 
       if (result.data?.success) {
-        isLoading(false)
+        isLoading(false);
         // perform success
       } else {
         // perform failed
@@ -104,10 +101,26 @@ function ShopOwner() {
       >
         {/* Select Mobile Section */}
         <div className="flex justify-center items-center gap-x-2">
-          <div className="mb-5 rounded-full flex justify-center items-center border border-[#d2ae60] p-1">
-            <button className="bg-[#d2ae60] rounded-full text-md w-32 h-32 flex justify-center items-center  text-black font-semibold ">
-              <span>Select Mobile</span>
-            </button>
+          <div className="mb-5 rounded-full flex justify-center items-center border border-[#d2ae60] p-1 w-full">
+            <select
+              {...register("selectedModel")}
+              className="bg-[#d2ae60] rounded-full text-md w-36 h-36 flex justify-center items-center text-black font-semibold px-4 py-2 focus:outline-none appearance-none"
+              style={{
+                appearance: "none",
+                WebkitAppearance: "none",
+                MozAppearance: "none",
+              }}
+            >
+              <option value="">Select Mobile</option>
+              <option value="iPhone 12">iPhone 12</option>
+              <option value="iPhone 12 Pro">iPhone 12 Pro</option>
+              <option value="iPhone 13">iPhone 13</option>
+              <option value="iPhone 13 Pro">iPhone 13 Pro</option>
+              <option value="iPhone 14">iPhone 14</option>
+              <option value="iPhone 14 Pro">iPhone 14 Pro</option>
+              <option value="iPhone 15">iPhone 15</option>
+              <option value="iPhone 15 Pro">iPhone 15 Pro</option>
+            </select>
           </div>
 
           <div className="border rounded-full flex justify-center items-center  border-[#d2ae60]">
